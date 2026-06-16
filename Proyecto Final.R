@@ -169,7 +169,10 @@ for (i in seq(1, length(genes))){
       diff = which(genComp != genAustComp)
       if (length(diff) > 0){
         cat("  Se encontraron", length(diff), "diferencias \n")
+        
         prevMutation = ""
+        prevCodon = 0
+        
         for (j in diff){
           muta = paste(genComp[j], " to ", genAustComp[j], sep="")
           inicio = j - ((j - 1) %% 3)
@@ -177,6 +180,12 @@ for (i in seq(1, length(genes))){
           codon2 = substr(rnaAustComp,inicio,inicio+2)
           cambio = paste(codon1, "to", codon2)
           numCodon = ((j - 1) %/% 3) + 1
+          
+          if (numCodon == prevCodon){
+            next
+          }
+          prevCodon = numCodon
+          
           amino1 = tradCodon[codon1]
           amino2 = tradCodon[codon2]
           cambioAmino = paste(amino1, numCodon, amino2, sep="")
