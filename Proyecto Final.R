@@ -3,7 +3,10 @@ library(ggplot2)
 library(dplyr)
 
 genes = read.fasta("sequenceWuhan.txt", forceDNAtolower = FALSE)
-genesAust = read.fasta("5Australia(D.2).fasta", forceDNAtolower = FALSE)
+genesOmicron = read.fasta("sequences(Omicron).fasta", forceDNAtolower = FALSE)
+genesDelta = read.fasta("sequences(Delta).fasta", forceDNAtolower = FALSE)
+
+variantes = list(Omicron = genesOmicron, Delta = genesDelta)
 
 datos = data.frame(
   muta = character(),
@@ -68,137 +71,144 @@ for (i in seq(1, length(genes))){
   numCodones = numNucleot/3
   cat("Wuhan   -->  Nucleótidos:", numNucleot, "   -->  Codones:", numCodones, "\n")
   
-  for (k in seq(i, length(genesAust), 12)){
+  for (nombreVariante in names(variantes)){
     
-    secuenciaAust = ""
-    for(j in seq(1, length(genesAust[[k]]))){
-      letraAust = genesAust[[k]][j]
-      secuenciaAust = paste(secuenciaAust, letraAust, sep="")
-    }
+    genesVar = variantes[[nombreVariante]]
     
-    rnaAust = ""
-    for(j in seq(1, nchar(secuenciaAust))){
-      letraAust = substr(secuenciaAust, j, j)
-      cambio = switch(letraAust, "T" = "U", letraAust)
-      rnaAust = paste(rnaAust, cambio, sep="")
-    }
+    numMuestra = 1
+    for (k in seq(i, length(genesVar), 12)){
     
-    genAust = genesAust[[k]]
-    numNucleotAust = nchar(rnaAust)
-    numCodonesAust = numNucleotAust/3
-    cat("Australia   -->  Nucleótidos:", numNucleotAust, "   -->  Codones:", numCodonesAust, "\n")
+      secuenciaAust = ""
+      for(j in seq(1, length(genesVar[[k]]))){
+        letraAust = genesVar[[k]][j]
+        secuenciaAust = paste(secuenciaAust, letraAust, sep="")
+      }
+    
+      rnaAust = ""
+      for(j in seq(1, nchar(secuenciaAust))){
+        letraAust = substr(secuenciaAust, j, j)
+        cambio = switch(letraAust, "T" = "U", letraAust)
+        rnaAust = paste(rnaAust, cambio, sep="")
+      }
+    
+      genAust = genesVar[[k]]
+      numNucleotAust = nchar(rnaAust)
+      numCodonesAust = numNucleotAust/3
+      cat(nombreVariante, numMuestra, "  -->  Nucleótidos:", numNucleotAust, "   -->  Codones:", numCodonesAust, "\n")
 # ----------------------------------------------------------------
     
-    rnaComp = rna
-    rnaAustComp = rnaAust
-    genComp = gen
-    genAustComp = genAust
+      rnaComp = rna
+      rnaAustComp = rnaAust
+      genComp = gen
+      genAustComp = genAust
     
-    if (nchar(rnaComp) != nchar(rnaAustComp)){ 
+      if (nchar(rnaComp) != nchar(rnaAustComp)){ 
       
-      rnaAli = unlist(strsplit(rnaComp, ""))
-      rnaAliAust = unlist(strsplit(rnaAustComp, ""))
+        rnaAli = unlist(strsplit(rnaComp, ""))
+        rnaAliAust = unlist(strsplit(rnaAustComp, ""))
       
-      rnaAli = c(" ", rnaAli)
-      rnaAliAust = c(" ", rnaAliAust)
+        rnaAli = c(" ", rnaAli)
+        rnaAliAust = c(" ", rnaAliAust)
       
-      m = matrix(data=0, nrow=length(rnaAliAust), ncol=length(rnaAli))
-      m[1,] = seq(0,-2*(length(rnaAli)-1), -2)
-      m[,1] = seq(0,-2*(length(rnaAliAust)-1), -2)
-      for (fila in seq(2, length(rnaAliAust))){
-        for (col in seq(2, length(rnaAli))){
-          if (rnaAli[col]==rnaAliAust[fila]){
-            d=m[fila-1, col-1] + 1
-          } else {
-            d=m[fila-1, col-1]-1
-          }
-          up = m[fila-1, col] -2
-          left = m[fila, col-1] -2
+        m = matrix(data=0, nrow=length(rnaAliAust), ncol=length(rnaAli))
+        m[1,] = seq(0,-2*(length(rnaAli)-1), -2)
+        m[,1] = seq(0,-2*(length(rnaAliAust)-1), -2)
+        for (fila in seq(2, length(rnaAliAust))){
+          for (col in seq(2, length(rnaAli))){
+            if (rnaAli[col]==rnaAliAust[fila]){
+              d=m[fila-1, col-1] + 1
+            } else {
+              d=m[fila-1, col-1]-1
+            }
+            up = m[fila-1, col] -2
+            left = m[fila, col-1] -2
           
-          peso = max(d, up, left)
-          m[fila, col] = peso
-        }
-      } 
-      
-      fila = length(rnaAliAust)
-      col = length(rnaAli)
-      newgen = c()
-      newgenAust = c()
-      while (fila > 1 || col > 1){
-        if (fila > 1 && col > 1 && rnaAli[col] == rnaAliAust[fila]){
-          newgen = c(rnaAli[col], newgen)
-          newgenAust = c(rnaAliAust[fila], newgenAust)
-          fila = fila-1
-          col = col-1
-        } 
-        else{
-          if (fila > 1 && col > 1){
-            up = m[fila-1, col] - 2
-            left = m[fila, col-1] - 2
-            cambio = max(up, left)
-          } else if (fila > 1){
-            up = m[fila-1, col] - 2
-            cambio = up
-          } else if (col > 1){
-            left = m[fila, col-1] - 2
-            cambio = left
+            peso = max(d, up, left)
+            m[fila, col] = peso
           }
-          if (fila > 1 && cambio == up){
-            newgen = c("-", newgen)
+        } 
+      
+        fila = length(rnaAliAust)
+        col = length(rnaAli)
+        newgen = c()
+        newgenAust = c()
+        while (fila > 1 || col > 1){
+          if (fila > 1 && col > 1 && rnaAli[col] == rnaAliAust[fila]){
+            newgen = c(rnaAli[col], newgen)
             newgenAust = c(rnaAliAust[fila], newgenAust)
             fila = fila-1
-          }
-          else if (col > 1 && cambio == left){
-            newgen = c(rnaAli[col], newgen)
-            newgenAust = c("-", newgenAust)
             col = col-1
+          } 
+          else{
+            if (fila > 1 && col > 1){
+              up = m[fila-1, col] - 2
+              left = m[fila, col-1] - 2
+              cambio = max(up, left)
+            } else if (fila > 1){
+              up = m[fila-1, col] - 2
+              cambio = up
+            } else if (col > 1){
+              left = m[fila, col-1] - 2
+              cambio = left
+            }
+            if (fila > 1 && cambio == up){
+              newgen = c("-", newgen)
+              newgenAust = c(rnaAliAust[fila], newgenAust)
+              fila = fila-1
+            }
+            else if (col > 1 && cambio == left){
+              newgen = c(rnaAli[col], newgen)
+              newgenAust = c("-", newgenAust)
+              col = col-1
+            }
           }
         }
-      }
-      rnaComp = paste(newgen, collapse="")
-      rnaAustComp = paste(newgenAust, collapse="")
+        rnaComp = paste(newgen, collapse="")
+        rnaAustComp = paste(newgenAust, collapse="")
       
-      genComp = unlist(strsplit(rnaComp, ""))
-      genAustComp = unlist(strsplit(rnaAustComp, ""))
-    }
+        genComp = unlist(strsplit(rnaComp, ""))
+        genAustComp = unlist(strsplit(rnaAustComp, ""))
+      }
     
 # -----------------------------------------------------------------
     
-    if (length(genComp) == length(genAustComp)){
-      diff = which(genComp != genAustComp)
-      if (length(diff) > 0){
-        cat("  Se encontraron", length(diff), "diferencias \n")
+      if (length(genComp) == length(genAustComp)){
+        diff = which(genComp != genAustComp)
+        if (length(diff) > 0){
+          cat("  Se encontraron", length(diff), "diferencias \n")
         
-        prevMutation = ""
-        prevCodon = 0
+          prevMutation = ""
+          prevCodon = 0
         
-        for (j in diff){
-          muta = paste(genComp[j], " to ", genAustComp[j], sep="")
-          inicio = j - ((j - 1) %% 3)
-          codon1 = substr(rnaComp,inicio,inicio+2)
-          codon2 = substr(rnaAustComp,inicio,inicio+2)
-          cambio = paste(codon1, "to", codon2)
-          numCodon = ((j - 1) %/% 3) + 1
+          for (j in diff){
+            muta = paste(genComp[j], " to ", genAustComp[j], sep="")
+            inicio = j - ((j - 1) %% 3)
+            codon1 = substr(rnaComp,inicio,inicio+2)
+            codon2 = substr(rnaAustComp,inicio,inicio+2)
+            cambio = paste(codon1, "to", codon2)
+            numCodon = ((j - 1) %/% 3) + 1
           
-          if (numCodon == prevCodon){
-            next
-          }
-          prevCodon = numCodon
+            if (numCodon == prevCodon){
+              next
+            }
+            prevCodon = numCodon
           
-          amino1 = tradCodon[codon1]
-          amino2 = tradCodon[codon2]
-          cambioAmino = paste(amino1, numCodon, amino2, sep="")
-          if ((!is.na(amino1)) && (!is.na(amino2)) && (cambioAmino != prevMutation)){
-            cat("  Mutación:   --> ", muta, " Codón:", codon1, "to", codon2, " Aminoacido:", cambioAmino, gene, numCodon, "\n")
-            obs = list(muta, cambio, cambioAmino, j, gene)
-            datos[index,] = obs
-            index = index + 1
-          }else {
-            cat("  Diferencia con gap:   --> ", muta, " Codón:", codon1, "to", codon2,gene, numCodon, "\n")
+            amino1 = tradCodon[codon1]
+            amino2 = tradCodon[codon2]
+            cambioAmino = paste(amino1, numCodon, amino2, sep="")
+            if ((!is.na(amino1)) && (!is.na(amino2)) && (cambioAmino != prevMutation)){
+              cat("  Mutación:   --> ", muta, " Codón:", codon1, "to", codon2, " Aminoacido:", cambioAmino, gene, numCodon, "\n")
+              obs = list(muta, cambio, cambioAmino, j, gene)
+              datos[index,] = obs
+              index = index + 1
+            }else {
+              cat("  Diferencia con gap:   --> ", muta, " Codón:", codon1, "to", codon2,gene, numCodon, "\n")
+            }
+            prevMutation = cambioAmino
           }
-          prevMutation = cambioAmino
         }
       }
+      numMuestra = numMuestra + 1
     }
   }
   
