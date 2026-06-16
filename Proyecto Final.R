@@ -259,11 +259,6 @@ dfAmino = summarise(
   cuenta = n()
 )
 
-dfAmino = filter(
-  dfAmino,
-  cuenta > 0.20 * (length(genesAust)/12)
-)
-
 dfAmino = as.data.frame(dfAmino)
 str(dfAmino)
 
