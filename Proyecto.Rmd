@@ -1,6 +1,9 @@
 ---
-title: "Proyecto Integrador - Biologia Computacional"
-author: "Equipo 2"
+title: "Proyecto Integrador: Comparacion de Variantes de SARS-CoV-2"
+author: -Equipo 2       
+        -Javier Donaire Pineda
+        -Miguel Angel Jahen Martinez
+        -Montserrat Navarrete Ortiz
 date: "2026-06-16"
 output: html_document
 ---
@@ -9,3 +12,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Variantes Delta y Omicron Comparadas Con La Cepa Original de Wuhan
+
+### Introduccion
+
+A finales de 2019, se detecto una nueva enfermedad de tipo coronavirus a la que se le denomino **SARS-CoV-2**. Esta nueva variante se origino en China y mantuvo al mundo entero encerrado en su casa. Despues de algunos años, y de haber sufrido de primera mano lo que fue este virus, sirve para poder aprender mas a fondo su estructura y su organizacion. La finalidad de este proyecto es conocer los parecidos de las variantes mas famosas del COVID-19 (Delta y Omicron) y como evoluciono el virus. al paso del tiempo
+
+### Contexto
+
+### Hipotesis
+
+### Codigo
+
+### Conclusion
