@@ -1,4 +1,3 @@
-# montserrat Navarrete 
 library(seqinr)
 library(ggplot2)
 library(dplyr)
