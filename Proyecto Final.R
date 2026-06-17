@@ -286,3 +286,4 @@ p4 = p4 + geom_bar(stat="identity")
 p4 = p4 + geom_text(vjust=0)
 p4 = p4 + facet_grid(~gen, scales="free", space="free_x")
 p4
+
