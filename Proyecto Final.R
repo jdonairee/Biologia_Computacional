@@ -44,7 +44,6 @@ for (i in seq(1, length(genes))){
   
   if (i != 3) {
     next
-    # Esto para que solo muestre el gen S que esta en el lugar 3
   }
   
   geness = genes[[i]]
@@ -245,7 +244,7 @@ dfMuta = filter(
   summarise(
     group_by(datos, muta),
     cuenta = n()),
-  cuenta > 0.20 * sum(cuenta)
+  cuenta > 0.10 * sum(cuenta)
 )
 dfMuta = as.data.frame(dfMuta)
 str(dfMuta)
@@ -270,8 +269,13 @@ dfAmino = summarise(
   cuenta = n()
 )
 
-
 dfAmino = as.data.frame(dfAmino)
+
+dfAmino = filter(
+  dfAmino,
+  cuenta > 0.02 * sum(cuenta)
+)
+
 str(dfAmino)
 
 p4 = ggplot(dfAmino)
