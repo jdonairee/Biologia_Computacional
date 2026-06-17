@@ -11,8 +11,17 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 ## Variantes Delta y Omicron Comparadas Con La Cepa Original de Wuhan
+
+### Situación actual de COVID-19 a nivel mundial y en México
+
+El COVID-19 sigue siendo un tema importante, aunque actualmente ya no está tan presente como lo estuvo durante los primeros años de la pandemia. En 2020, 2021 y parte de 2022, el virus representaba una emergencia mundial, ya que los contagios, las hospitalizaciones y las muertes eran muy altas. Hoy la situación es diferente: el virus continúa circulando, pero su impacto general es menor y los sistemas de salud ya cuentan con más información, vacunas y herramientas para enfrentarlo.
+
+A nivel mundial, los datos muestran que el SARS-CoV-2 no ha desaparecido. Todavía hay casos en distintos países, pero la enfermedad ya no provoca el mismo nivel de alarma que en sus inicios. Un ejemplo de este cambio es el sitio de Johns Hopkins, que durante varios años recopiló datos diarios sobre casos y muertes de COVID-19 en el mundo, pero dejó de hacerlo en 2023 porque muchos países redujeron la frecuencia con la que reportaban información. También muchas personas ya no se hacen pruebas o no reportan la enfermedad como antes. Mostrando cómo la situación del COVID-19 cambió y pasó a ser parte de la vigilancia normal de enfermedades respiratorias.
+
+En México, el COVID-19 tampoco ha desaparecido. La Secretaría de Salud lo sigue revisando junto con otros virus respiratorios, como la influenza. En los reportes más recientes todavía aparecen casos en entidades como Ciudad de México, Hidalgo y Estado de México. Pero esto no significa que el país esté en una situación parecida a la de los años más graves de la pandemia, sino que el virus todavía está presente y por eso se mantiene el seguimiento epidemiológico.
+
+Respecto a las variantes, actualmente la mayoría de las que circulan son parte de la familia de Ómicron. Esta variante fue muy importante porque se propagó con rapidez a nivel mundial y cambió la forma en que avanzó la pandemia. Sin embargo, en este momento no hay una variante de preocupación mundial con el mismo impacto que tuvieron Delta u Ómicron en sus momentos más fuertes. Aun así, las variantes se siguen estudiando porque el virus puede cambiar con el tiempo.
 
 ### Introduccion
 
@@ -20,8 +29,40 @@ A finales de 2019, se detecto una nueva enfermedad de tipo coronavirus a la que 
 
 ### Contexto
 
+1.- El gen ORF1ab es el gen más grande del SARS-CoV-2 y funciona como el centro de trabajo del virus, su función es producir proteínas que ayudan a copiar el material genético viral cuando el virus ya entró a una célula. En pocas palabras, este gen le da al virus las herramientas para hacer muchas copias de sí mismo y seguir infectando más células.
+
+2.- El gen S produce la proteína Spike, la cual es una de las partes más conocidas del virus porque está en su superficie, funciona como una llave que le permite al virus pegarse a las células humanas y entrar en ellas, sin esta proteína al virus se le haría más difícil iniciar la infección.
+
+3.- El gen E produce una proteína llamada proteína de envoltura, esta ayuda a que los nuevos virus se armen correctamente dentro de la célula infectada, también participa en la salida de esos nuevos virus.
+
+4.- El gen M produce la proteína de membrana, la cual es una de las piezas principales que le da forma al virus. Su función es organizar las demás partes para que el virus se construya correctamente. En pocas palabras es el molde porque ayuda a acomodar las piezas del virus para que la nueva partícula viral quede completa y funcional.
+
+5.- El gen N produce proteína nucleocápside, su función es proteger el material genético del virus. Este material genético, son las instrucciones que el virus necesita para poder reproducirse.
+
+6.- El gen ORF3a es una proteína que no forma parte de la estructura principal del virus, pero le ayuda en la infección. Esta proteína altera algunas funciones de la célula y ayuda al virus a causar más daño. En pocas palabras, esta proteína es una ayuda para que el virus pueda causar un daño mayor.
+
+7.- El gen ORF6 ayuda a bloquear o reducir las señales de alarma del sistema inmune, es como si el virus intentará apagar la alarma para que las defensas tarden en reaccionar.
+
+8.- El gen ORF7a ayuda al virus a intervenir en la respuesta inmune, en pocas palabras, ayuda al virus a estorbar el trabajo de las defensas, haciendo que la célula no pueda responder tan bien.
+
+9.- El gen ORF7b produce una proteína, pero su función todavía no se conoce muy bien, lo más probable es que ayude en algunos procesos al virus en la célula infectada.
+
+10.- El gen ORF8 ayuda al virus a esconderse del sistema inmune, haciendo que el cuerpo no reaccione rápidamente ni reconozca las células que ya fueron infectadas. En pocas palabras es como un camuflaje que le ayuda al virus a pasar desapercibido y ganar tiempo.
+
+11.- El gen ORF10 es uno de los menos comprendidos, su función exacta todavía no está completamente confirmada. Se cree que participa en la relación entre el virus y la célula infectada, aunque no parece ser tan necesario para la reproducción del virus como ORF1ab, S, M o N.
+
 ### Hipotesis
 
 ### Codigo
 
 ### Conclusion
+
+### Referencias
+
+Dirección General de Epidemiología. (2026). Informes semanales para la vigilancia epidemiológica de influenza, COVID-19 y otros virus respiratorios 2026. Secretaría de Salud, Gobierno de México. Recuperado el 16 de junio de 2026, de <https://www.gob.mx/salud/documentos/informes-semanales-para-la-vigilancia-epidemiologic> a-de-influenza-covid-19-y-otros-virus-respiratorios-2026
+
+European Centre for Disease Prevention and Control. (2026). SARS-CoV-2 variants of concern as of 29 May 2026. <https://www.ecdc.europa.eu/en/covid-19/variants-concern> Johns Hopkins University & Medicine. (2023, 10 de marzo). Johns Hopkins COVID-19 data hub ends after three years. Johns Hopkins University Hub. <https://hub.jhu.edu/2023/03/10/coronavirus-resource-center-data-hub-ends/>
+
+World Health Organization. (2025). WHO scientific advisory group issues report on origins of COVID-19. <https://www.who.int/news/item/27-06-2025-who-scientific-advisory-group-issues-report-on-o> rigins-of-covid-19
+
+Isabel, S., Graña-Miraglia, L., Gutierrez, J. M., Bundalovic-Torma, C., Groves, H. E., Isabel, M. R., Eshaghi, A., Patel, S. N., Gubbay, J. B., Poutanen, T., Guttman, D. S., & Poutanen, S. M. (2020). Evolutionary and structural analyses of SARS-CoV-2 D614G spike protein mutation now documented worldwide. Scientific Reports, 10, 14031. <https://doi.org/10.1038/s41598-020-70827-z>
