@@ -11,6 +11,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 ## Variantes Delta y Omicron Comparadas Con La Cepa Original de Wuhan
 
 ### Situación actual de COVID-19 a nivel mundial y en México
@@ -23,11 +24,40 @@ En México, el COVID-19 tampoco ha desaparecido. La Secretaría de Salud lo sigu
 
 Respecto a las variantes, actualmente la mayoría de las que circulan son parte de la familia de Ómicron. Esta variante fue muy importante porque se propagó con rapidez a nivel mundial y cambió la forma en que avanzó la pandemia. Sin embargo, en este momento no hay una variante de preocupación mundial con el mismo impacto que tuvieron Delta u Ómicron en sus momentos más fuertes. Aun así, las variantes se siguen estudiando porque el virus puede cambiar con el tiempo.
 
+Uno de los primeros cambios del virus que se extendió por muchas partes del mundo
+fue la mutación D614G. Esta apareció durante los primeros meses de la pandemia y llegó a volverse dominante en varios países. De las variantes reconocidas oficialmente por la OMS,
+la primera variante de preocupación más conocida fue Alpha, detectada por primera vez en
+Reino Unido.
+
+Sobre el origen del virus, la explicación más aceptada es que el SARS-CoV-2 tuvo un
+origen zoonótico, es decir, que pasó de animales a seres humanos. Se piensa que los
+murciélagos fueron el reservorio original más probable. También se ha mencionado al
+pangolín como un posible animal intermediario, porque se encontraron coronavirus parecidos
+en esta especie; sin embargo, esto no se ha confirmado. Por eso, el origen exacto del virus
+todavía no está completamente confirmado.
+
+En conclusión, el COVID-19 sigue presente en México y en el mundo, pero ya no se
+encuentra en la misma etapa de emergencia que al inicio de la pandemia. La enfermedad
+ahora se vigila como parte de los virus respiratorios que pueden afectar a la población. Por lo
+que sigue siendo importante mantener la vigilancia de nuevas variantes, continuar con la
+vacunación y aprender de lo ocurrido para responder mejor ante futuras emergencias
+sanitarias.
+
 ### Introduccion
 
-A finales de 2019, se detecto una nueva enfermedad de tipo coronavirus a la que se le denomino **SARS-CoV-2**. Esta nueva variante se origino en China y mantuvo al mundo entero encerrado en su casa. Despues de algunos años, y de haber sufrido de primera mano lo que fue este virus, sirve para poder aprender mas a fondo su estructura y su organizacion. La finalidad de este proyecto es conocer los parecidos de las variantes mas famosas del COVID-19 (Delta y Omicron) y como evoluciono el virus. al paso del tiempo
+Durante el transcurso de la Unidad de Formación de Análisis de Biología Computacional se adquirieron conocimientos sobre el lenguaje de programación R, enfocado en el análisis de datos y la estadística. Sin embargo, más que quedarse únicamente en aprender a programar, el reto consistió en aplicar estas herramientas al análisis de información biológica real.
+
+Para este proyecto se decidió trabajar con el SARS-CoV-2, el virus causante de la pandemia de COVID-19, debido a que fue un acontecimiento que impactó a todo el mundo y del cual existe una gran cantidad de información genética disponible para su estudio. A lo largo de la pandemia surgieron distintas variantes del virus como resultado de mutaciones acumuladas en su genoma, algunas de las cuales presentaron diferencias importantes en su capacidad de transmisión.
+
+Con ayuda de R y de secuencias obtenidas de bases de datos biológicas, se analizará la estructura genética del virus y se comparará la secuencia original de Wuhan con las variantes Delta (B.1.617.2) y Ómicron (B.1.1.529). El objetivo es identificar las mutaciones presentes en estas variantes y analizar cómo estos cambios podrían afectar las proteínas del virus y contribuir a su evolución.
 
 ### Contexto
+
+ANtes que nada, cabe mencionar  que ORF1a y ORF1b están traslapados porque comparten
+una región del genoma viral. Esto sucede debido a un cambio en el marco de lectura durante
+la traducción, lo que permite que el virus produzca más proteínas usando menos espacio en su
+material genético.
+
 
 1.- El gen ORF1ab es el gen más grande del SARS-CoV-2 y funciona como el centro de trabajo del virus, su función es producir proteínas que ayudan a copiar el material genético viral cuando el virus ya entró a una célula. En pocas palabras, este gen le da al virus las herramientas para hacer muchas copias de sí mismo y seguir infectando más células.
 
@@ -66,3 +96,9 @@ European Centre for Disease Prevention and Control. (2026). SARS-CoV-2 variants 
 World Health Organization. (2025). WHO scientific advisory group issues report on origins of COVID-19. <https://www.who.int/news/item/27-06-2025-who-scientific-advisory-group-issues-report-on-o> rigins-of-covid-19
 
 Isabel, S., Graña-Miraglia, L., Gutierrez, J. M., Bundalovic-Torma, C., Groves, H. E., Isabel, M. R., Eshaghi, A., Patel, S. N., Gubbay, J. B., Poutanen, T., Guttman, D. S., & Poutanen, S. M. (2020). Evolutionary and structural analyses of SARS-CoV-2 D614G spike protein mutation now documented worldwide. Scientific Reports, 10, 14031. <https://doi.org/10.1038/s41598-020-70827-z>
+
+[NCBI]{.underline}
+
+<https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?VirusLineage_ss=taxid:2697049&SeqType_s=Nucleotide&Lineage_s=B.1.617.2&Completeness_s=complete&Country2_s=Mexico>
+
+<https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?VirusLineage_ss=taxid:2697049&SeqType_s=Nucleotide&Completeness_s=complete&Lineage_s=B.1.1.529&Country2_s=Mexico>
