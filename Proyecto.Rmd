@@ -24,24 +24,11 @@ En México, el COVID-19 tampoco ha desaparecido. La Secretaría de Salud lo sigu
 
 Respecto a las variantes, actualmente la mayoría de las que circulan son parte de la familia de Ómicron. Esta variante fue muy importante porque se propagó con rapidez a nivel mundial y cambió la forma en que avanzó la pandemia. Sin embargo, en este momento no hay una variante de preocupación mundial con el mismo impacto que tuvieron Delta u Ómicron en sus momentos más fuertes. Aun así, las variantes se siguen estudiando porque el virus puede cambiar con el tiempo.
 
-Uno de los primeros cambios del virus que se extendió por muchas partes del mundo
-fue la mutación D614G. Esta apareció durante los primeros meses de la pandemia y llegó a volverse dominante en varios países. De las variantes reconocidas oficialmente por la OMS,
-la primera variante de preocupación más conocida fue Alpha, detectada por primera vez en
-Reino Unido.
+Uno de los primeros cambios del virus que se extendió por muchas partes del mundo fue la mutación D614G. Esta apareció durante los primeros meses de la pandemia y llegó a volverse dominante en varios países. De las variantes reconocidas oficialmente por la OMS, la primera variante de preocupación más conocida fue Alpha, detectada por primera vez en Reino Unido.
 
-Sobre el origen del virus, la explicación más aceptada es que el SARS-CoV-2 tuvo un
-origen zoonótico, es decir, que pasó de animales a seres humanos. Se piensa que los
-murciélagos fueron el reservorio original más probable. También se ha mencionado al
-pangolín como un posible animal intermediario, porque se encontraron coronavirus parecidos
-en esta especie; sin embargo, esto no se ha confirmado. Por eso, el origen exacto del virus
-todavía no está completamente confirmado.
+Sobre el origen del virus, la explicación más aceptada es que el SARS-CoV-2 tuvo un origen zoonótico, es decir, que pasó de animales a seres humanos. Se piensa que los murciélagos fueron el reservorio original más probable. También se ha mencionado al pangolín como un posible animal intermediario, porque se encontraron coronavirus parecidos en esta especie; sin embargo, esto no se ha confirmado. Por eso, el origen exacto del virus todavía no está completamente confirmado.
 
-En conclusión, el COVID-19 sigue presente en México y en el mundo, pero ya no se
-encuentra en la misma etapa de emergencia que al inicio de la pandemia. La enfermedad
-ahora se vigila como parte de los virus respiratorios que pueden afectar a la población. Por lo
-que sigue siendo importante mantener la vigilancia de nuevas variantes, continuar con la
-vacunación y aprender de lo ocurrido para responder mejor ante futuras emergencias
-sanitarias.
+En conclusión, el COVID-19 sigue presente en México y en el mundo, pero ya no se encuentra en la misma etapa de emergencia que al inicio de la pandemia. La enfermedad ahora se vigila como parte de los virus respiratorios que pueden afectar a la población. Por lo que sigue siendo importante mantener la vigilancia de nuevas variantes, continuar con la vacunación y aprender de lo ocurrido para responder mejor ante futuras emergencias sanitarias.
 
 ### Introduccion
 
@@ -53,35 +40,15 @@ Con ayuda de R y de secuencias obtenidas de bases de datos biológicas, se anali
 
 ### Explicacion del Gen S
 
-Las mutaciones en el gen S son importantes porque este gen produce la proteína
-Spike, que es la estructura que el virus utiliza para unirse a las células humanas y poder entrar
-en ellas. Cuando ocurren cambios en este gen, la forma de la proteína Spike puede
-modificarse, y eso puede afectar la facilidad con la que el virus se pega a las células, por lo
-que algunas mutaciones pueden hacer que el virus se transmita con mayor rapidez o que
-tenga más facilidad para iniciar la infección.
+Las mutaciones en el gen S son importantes porque este gen produce la proteína Spike, que es la estructura que el virus utiliza para unirse a las células humanas y poder entrar en ellas. Cuando ocurren cambios en este gen, la forma de la proteína Spike puede modificarse, y eso puede afectar la facilidad con la que el virus se pega a las células, por lo que algunas mutaciones pueden hacer que el virus se transmita con mayor rapidez o que tenga más facilidad para iniciar la infección.
 
-Además, como la proteína Spike es una de las partes principales que reconoce el
-sistema inmune, sus mutaciones también pueden influir en qué tan bien los anticuerpos
-reconocen al virus. Por eso, algunas variantes del SARS-CoV-2 han sido estudiadas
-especialmente por los cambios que presentan en el gen S. Sin embargo, no todas las
-mutaciones tienen consecuencias importantes; algunas pueden no cambiar mucho el
-comportamiento del virus.
+Además, como la proteína Spike es una de las partes principales que reconoce el sistema inmune, sus mutaciones también pueden influir en qué tan bien los anticuerpos reconocen al virus. Por eso, algunas variantes del SARS-CoV-2 han sido estudiadas especialmente por los cambios que presentan en el gen S. Sin embargo, no todas las mutaciones tienen consecuencias importantes; algunas pueden no cambiar mucho el comportamiento del virus.
 
-Algunos ejemplos de mutaciones en el gen S son la mutación D614G, que se asoció
-con una mayor capacidad de transmisión del virus; la mutación N501Y, que puede aumentar
-la unión entre la proteína Spike y el receptor ACE2 de las células humanas; y la mutación
-E484K, que se ha relacionado con una menor capacidad de algunos anticuerpos para
-reconocer al virus. También existen mutaciones que no producen cambios importantes o cuyo
-efecto todavía no se conoce completamente, por eso no todas las mutaciones del gen S
-significan que el virus se vuelva más peligroso.
+Algunos ejemplos de mutaciones en el gen S son la mutación D614G, que se asoció con una mayor capacidad de transmisión del virus; la mutación N501Y, que puede aumentar la unión entre la proteína Spike y el receptor ACE2 de las células humanas; y la mutación E484K, que se ha relacionado con una menor capacidad de algunos anticuerpos para reconocer al virus. También existen mutaciones que no producen cambios importantes o cuyo efecto todavía no se conoce completamente, por eso no todas las mutaciones del gen S significan que el virus se vuelva más peligroso.
 
 ### Contexto
 
-ANtes que nada, cabe mencionar  que ORF1a y ORF1b están traslapados porque comparten
-una región del genoma viral. Esto sucede debido a un cambio en el marco de lectura durante
-la traducción, lo que permite que el virus produzca más proteínas usando menos espacio en su
-material genético.
-
+Antes que nada, cabe mencionar que ORF1a y ORF1b están traslapados porque comparten una región del genoma viral. Esto sucede debido a un cambio en el marco de lectura durante la traducción, lo que permite que el virus produzca más proteínas usando menos espacio en su material genético.
 
 1.- El gen ORF1ab es el gen más grande del SARS-CoV-2 y funciona como el centro de trabajo del virus, su función es producir proteínas que ayudan a copiar el material genético viral cuando el virus ya entró a una célula. En pocas palabras, este gen le da al virus las herramientas para hacer muchas copias de sí mismo y seguir infectando más células.
 
@@ -107,8 +74,12 @@ material genético.
 
 ### Hipotesis
 
+La variante Ómicron (B.1.1.529) presenta una mayor cantidad de mutaciones que la variante Delta (B.1.617.2) y la secuencia original de Wuhan, especialmente en el gen Spike, lo que se reflejará en un mayor número de cambios de aminoácidos en las proteínas virales.
+
 ### Codigo y Graficas
+
 Primero se declaran las librerias a utilizar: seqinr (para leer el formato de las secuencias, fasta y txt), ggplot (para graficar) y dplyr (para filtrar datos).
+
 ```{r}
 library(seqinr)
 library(ggplot2)
@@ -163,7 +134,9 @@ Se hace otro ciclo para recorrer esta nueva secuencia en texto y traducirlo de A
 
 Despues de esto se hace nuevamente el proceso de traduccion, ya que primero solo se hizo para la secuencia original, asi que esto es para las dos variantes. Ahora hay dos comprobaciones: si tienen distinta longitud (entonces se necesitaria hacer el alineamiento de Needleman-Wunsch) o si tienen distinta longitud se analizan uno por uno y las comparaciones son mas sencillas. Si son diferente longitud se comienza convirtiendo ambas secuencias de ARN en vectores de caracteres para poder compararlas nucleótido por nucleótido. Después, crea una matriz m donde se almacenarán las puntuaciones del alineamiento, inicializando la primera fila y columna con penalizaciones por espacios. Mediante dos ciclos anidados, calcula para cada posición la mejor puntuación posible considerando tres opciones: avanzar en diagonal si los nucleótidos coinciden o difieren, insertar un espacio en una secuencia o insertarlo en la otra. Una vez completada la matriz, el ciclo while recorre la matriz desde la última celda hasta la primera para reconstruir la secuencia y realizar un buen alineamiento, agregando nucleótidos o guiones según el camino seguido. Finalmente, las nuevas secuencias alineadas se unen nuevamente en cadenas de texto nombradas rnaComp y rnaAustComp, quedando listas para detectar mutaciones y diferencias entre ambas muestras. Luego se juntan los nucleótidos alineados en una sola cadena de texto para cada secuencia (rnaComp y rnaAustComp). Finalmente, vuelve a separar esas cadenas en letras individuales, creando dos vectores. Esto se hace para poder comparar fácilmente cada posición de ambas secuencias y detectar dónde son diferentes.
 
-En el caso que sean de la misma lonitud, en un vector diff se almacenan en que posiciones son diferentes y se muestra en que posiciones son diferentes si la longitud del vector es mayor a 0. Despues se recorre en este vector con un ciclo y se almacenan los codones que cambian en cada posicion. Con la posicion de cada posicion se saca la posicion de inicio del codon en cuestion. Con esto, en las dos secuencias se sacan los codones que mutaron y se traducen a aminoacidos, primero se debe de saber el nucleotido de inicio para poder traducir bien el codon y no hacerlo con una posion incorrecta. Ya con el aminoacido de ambas secuencias, se guarda la mutacion en cambioAmino. Si ambos aminos son validos y la mutacion no se repitio antes se imprime: la mutacion, el cambio
+En el caso que sean de la misma lonitud, en un vector diff se almacenan en que posiciones son diferentes y se muestra en que posiciones son diferentes si la longitud del vector es mayor a 0. Despues se recorre en este vector con un ciclo y se almacenan los codones que cambian en cada posicion. Con la posicion de cada posicion se saca la posicion de inicio del codon en cuestion. Con esto, en las dos secuencias se sacan los codones que mutaron y se traducen a aminoacidos, primero se debe de saber el nucleotido de inicio para poder traducir bien el codon y no hacerlo con una posion incorrecta. Ya con el aminoacido de ambas secuencias, se guarda la mutacion en cambioAmino. Si ambos aminos son validos y la mutacion no se repitio antes se imprime: la mutacion, el cambio de codon, cambio de aminoacido, gen y numero del codon.
+
+Finalmente se traducen secuencias de ARN a secuencias de aminoácidos para poder comparar las proteínas producidas por la secuencia original y por una variante del virus. Para ello, recorre cada secuencia de ARN de tres en tres nucleótidos, ya que cada grupo de nucleotidos forman un codón. Cada vez extrae el codón correspondiente, consulta en el vector tradCodon qué aminoácido le corresponde según el código genético y lo agrega a una cadena que representa la proteína completa. Este procedimiento se realiza tanto para la secuencia original llamado rna como para la secuencia de la variante (rnaAust), generando las secuencias aminoacidosy aminoacidosAust.
 
 ```{r}
 for (i in seq(1, length(genes))){
@@ -363,7 +336,100 @@ for (i in seq(1, length(genes))){
 }
 ```
 
+Ahora viene la parte de las graficas, una de cambio de nucleotido y otro de cambio de aminoacido . Primero toma el data frame (tabla) ya hecho previamente llamado datos y lo agrupa por el tipo de mutación de nucleótido (muta), contando cuántas veces aparece cada una con summarise(cuenta = n()). Luego filtra solo las mutaciones que representan más del 10% del total. Esto se hace para quedarse únicamente con las más frecuentes y que no este abultada, pero manteniendo cierta cantidad de. Con esos datos construye un gráfico de barras en ggplot donde en el eje X están los tipos de mutación, en el eje Y la frecuencia y cada barra está coloreada según la mutación, además de mostrar el valor encima de cada una.
+
+Después el código hace un análisis más selectivo a nivel de aminoácidos, agrupando los datos por gen (gen) y por cambio de aminoácido (cambioAmino), y calcula la frecuencia de cada cambio mientras guarda información extra como el codón, la posición y la mutación original. Luego filtra los cambios que representan más del 2% del total para enfocarse en los más relevantes y convierte todo a data frame. Finalmente genera otro gráfico de barras donde se comparan los cambios de aminoácidos, pero ahora separados por gen usando facet_grid, lo que permite ver en qué regiones del genoma del virus ocurren más mutaciones y cómo se distribuyen entre los distintos genes.
+
+```{r}
+dfMuta = filter(
+  summarise(
+    group_by(datos, muta),
+    cuenta = n()),
+  cuenta > 0.10 * sum(cuenta)
+)
+dfMuta = as.data.frame(dfMuta)
+str(dfMuta)
+
+p1 = ggplot(dfMuta)
+p1 = p1 + aes(x=muta, y=cuenta, fill=muta, label=cuenta)
+p1 = p1 + ggtitle("Cambio de Nucleotido")
+p1 = p1 + labs(x="Mutation", y="Frecuencia", fill="cambio")
+p1 = p1 + geom_bar(stat="identity")
+p1 = p1 + geom_text(vjust=0)
+p1
+
+# ==============================
+
+dfAmino = group_by(datos, gen, cambioAmino)
+
+dfAmino = summarise(
+  dfAmino,
+  mutacion = first(muta),
+  cambioCodon = first(cambioCodon),
+  pos = first(pos),
+  cuenta = n()
+)
+
+dfAmino = as.data.frame(dfAmino)
+
+dfAmino = filter(
+  dfAmino,
+  cuenta > 0.02 * sum(cuenta)
+)
+
+str(dfAmino)
+
+p4 = ggplot(dfAmino)
+p4 = p4 + aes(x=cambioAmino, y=cuenta, fill=cambioAmino, label=cuenta)
+p4 = p4 + ggtitle("Cambio de Aminoacidos")
+p4 = p4 + labs(x="Amino", y="Frecuencia", fill="Frecuencia")
+p4 = p4 + geom_bar(stat="identity")
+p4 = p4 + geom_text(vjust=0)
+p4 = p4 + facet_grid(~gen, scales="free", space="free_x")
+p4
+
+
+```
+
+Para poder analizar se hacen data frames con as mutaciones caracteristicas del gen s de cada variante de acuerdo a
+
+```{r}
+omicron_pangolin <- c(
+  "S:A67V","S:T95I","S:G339D","S:S371L","S:S373P",
+  "S:K417N","S:N440K","S:G446S","S:S477N","S:T478K",
+  "S:E484A","S:Q493R","S:G496S","S:Q498R","S:N501Y",
+  "S:T547K","S:D614G","S:H655Y","S:N679K","S:P681H",
+  "S:N764K","S:D796Y","S:N856K","S:Q954H","S:N969K"
+)
+
+df <- data.frame(omicron = omicron_pangolin)
+
+df
+
+delta_pangolin <- c(
+  "S:T19R",
+  "S:L452R",
+  "S:T478K",
+  "S:P681R",
+  "S:D950N"
+)
+
+df_delta <- data.frame(delta = delta_pangolin)
+
+df_delta
+```
+
 ### Conclusion
+
+A partir del análisis realizado en R sobre las secuencias del gen S del SARS-CoV-2, fue posible identificar y comparar las mutaciones presentes en las variantes Delta y Omicron respecto a la cepa original de Wuhan.
+
+En cuanto a los cambios de nucleótidos, la transición más frecuente fue C to G con 139 veces, despues siguen C to U con 103, G to A con 89, A to G con 84, C to A con 77 y U to G con 69. Es importante tomar en cuenta que Delta contó con 69 secuencias analizadas frente a solo 4 de Omicron, por lo que la mayor parte de estas frecuencias refleja principalmente el comportamiento mutacional de Delta.
+
+Respecto a los cambios de aminoácidos, la mutación D614G fue la más frecuente con 73 apariciones, siendo una mutación presente en ambas variantes y que se noto desde etapas tempranas de la pandemia. Le siguieron P681R (69), T478K (69), T19R (68) y L452R (68), que son mutaciones características de Delta y que explican su alta frecuencia por el mayor número de secuencias de esta variante. Por su parte, mutaciones asociadas a Omicron como T95I aparecen con menor frecuencia (20), lo cual es consistente con el bajo número de secuencias disponibles de esta variante en el análisis.
+
+Con esto, la hipótesis planteada no puede confirmarse completamente con los datos analizados, ya que la diferencia en el número de secuencias entre ambas variantes hace que la comparación directa no sea equitativa. Sin embargo, cualitativamente sí se observa que Omicron presenta un conjunto de mutaciones distintas a las de Delta en el gen S, lo que refleja trayectorias evolutivas diferentes: Delta con cambios como L452R y P681R que aumentan la afinidad por el receptor ACE2, y Omicron con mutaciones que afectan en mayor medida el reconocimiento por anticuerpos.
+
+En conclusión, el uso de R como herramienta de análisis biologico en computacion permitió identificar y visualizar patrones de mutación en el gen S del SARS-CoV-2. El análisis dejó en evidencia que contar con un número equilibrado de secuencias por variante es clave para hacer comparaciones más precisas, lo cual es una consideración importante para futuros estudios de este tipo.
 
 ### Referencias
 
@@ -380,3 +446,9 @@ Isabel, S., Graña-Miraglia, L., Gutierrez, J. M., Bundalovic-Torma, C., Groves,
 <https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?VirusLineage_ss=taxid:2697049&SeqType_s=Nucleotide&Lineage_s=B.1.617.2&Completeness_s=complete&Country2_s=Mexico>
 
 <https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?VirusLineage_ss=taxid:2697049&SeqType_s=Nucleotide&Completeness_s=complete&Lineage_s=B.1.1.529&Country2_s=Mexico>
+
+[Pangolin]{.underline}
+
+<https://cov-lineages.org/global_report_B.1.1.529.html>
+
+<https://cov-lineages.org/global_report_B.1.617.2.html>
